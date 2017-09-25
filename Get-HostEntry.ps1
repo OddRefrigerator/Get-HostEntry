@@ -1,18 +1,12 @@
 <#
-
 .SYNOPSIS
 This is a simple script that tries to look up a host name using an IP. 
-
 .DESCRIPTION
 Looks up a host name using an IP addres provided either from the command line or pipe line. 
-
 .EXAMPLE
 ./Get-HostEntry.ps1
-
 .NOTES
 Authour: Stephen Ancliffe
-
-
 #>
 
 Param(
@@ -34,6 +28,6 @@ foreach ($IP in $IPList){
         $DNSResult = "Unable to look up host for "
         Write-Host $DNSResult -NoNewline
         Write-Host $IP -ForegroundColor Red
-    }
+    } 
 }
 
